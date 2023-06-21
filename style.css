@@ -29,6 +29,7 @@ button{
     cursor: pointer;
     position: absolute;
     border-radius: 10px;
+    z-index: 1;
     left: 0;
   right: 0;
   margin: 0 auto;
@@ -242,7 +243,7 @@ display: none;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
 }
 .delete-button{
   position: absolute;
