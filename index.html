@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Lister</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+       <h1>Book Library</h1>
+    </div>
+    <button type="submit" class="btn" onclick="openPopup()">Add A Book</button>
+    <div class="add">
+        <div class="popup" id="popup">
+            <h2 class="H2">Adding A New Book</h2>
+            <input type="text" name="Title" id="Title" placeholder="Title">
+            <input type="text" name="Author" id="Author" placeholder="Author">
+            <input type="number" name="Pages" id="Pages" placeholder="Pages">
+            <div class="haveRead">
+                <label for="haveread" class="T1">Check If You've Read It.</label>
+               <input type="checkbox" name="haveRead" id="haveRead">
+            </div>
+            <div class="buttons">
+                <span> <button type="submit" class="Submit_book" onclick="closePopup()">Submit</button> </span>
+           <span><button class="close_button" onclick="closePopup()">Close</button></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="books">
+
+    </div>
+    
+    <script src="main.js" defer></script>
+</body>
+</html>

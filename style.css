@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+    color: white;
+}
+body{
+    background: black;
+}
+.header{
+    min-width: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 20px;
+}
+button{
+    cursor: pointer;
+}
+.btn{
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+  right: 0;
+  margin: 0 auto;
+
+}
+.btn:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.btn:active {
+    color: #000
+}
+.btn:active:after {
+    background: transparent;
+}
+.btn:hover:before {
+    opacity: 1;
+}
+.btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}    
+.add{
+    text-align: center;
+    margin-top: 10%;
+}
+.Submit_book{
+    color: black;
+    background: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    padding: 5px;
+}
+.T1{
+    color: black;
+}
+.haveRead{
+    display: flex;
+    gap: 5px;
+}
+.popup{
+    padding: 20px;
+    width: 250px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    visibility: hidden;
+    transition: transform 0.2s, top 0.2s;
+    z-index: 2;
+}
+.open_popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+}
+#Title, #Author, #Pages {
+    height: 33px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 5px;
+    color: black;
+}
+.H2{
+    color: black;
+}
+.Submit_book:before,
+.Submit_book:after,
+span:before,
+span:after
+{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background: rgb(0, 0, 0);
+    transition: 1s;
+    mix-blend-mode: hue;
+    border-radius: 6px;
+}
+
+.Submit_book:before
+{
+    top: -2px;
+    left: -2px;
+    border-radius: 6px;
+
+}
+.Submit_book:after
+{
+    top: -2px;
+    right: -2px;
+    border-radius: 6px;
+
+}
+span:before
+{
+    bottom: -2px;
+    left: -2px;
+    border-radius: 6px;
+
+}
+span:after
+{
+    bottom: -2px;
+    right: -3px;
+    border-radius: 6px;
+
+}
+
+
+.close_button{
+    color: black;
+    background: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    padding: 5px;
+}
+.buttons{
+    display: flex;
+    gap: 45px;
+}
+.books{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 20px; 
+    
+}
+.books{
+    flex: 0 1 calc(44% - 1em);
+    border-radius: 5px;
+    overflow:hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card_close{
+display: none;
+}
+.book-Title, .book-Author, .book-Pages{
+    color: black;
+    padding: 5px;
+}
+.delete_book{
+    color: black;
+    background-color: white;
+    border: none;
+    width: 28%;
+    margin-left: 80%;
+}
+.fa-solid, .fa-xmark {
+    color: black;
+    font-size: 30px;
+}
+
+.book > *{
+    color: black;
+}
+.book{
+    position: relative;
+    padding: 10px;
+    height: 10em;
+    width: 20em;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.delete-button{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+}
