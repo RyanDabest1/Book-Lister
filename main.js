@@ -149,9 +149,15 @@ function deleteBook(e){
     console.log(bookTitle)
     console.log(bookAuthor)
     console.log(bookPages)
-    console.log(bookHaveRead)
+    if(bookHaveRead == 'true'){
+        bookHaveRead = true;
+        console.log(bookHaveRead)
+    } else {
+        bookHaveRead = false;
+        console.log(bookHaveRead)
+    }
     for(let i = 0; i < library.length; i++){
-        if(bookTitle == library[i].name){
+        if(bookTitle == library[i].name && bookAuthor == library[i].author && bookPages == library[i].pages && bookHaveRead === library[i].haveRead){
             if(array.length == 1){
             array.pop();
             localStorage.setItem("library", JSON.stringify(array))
