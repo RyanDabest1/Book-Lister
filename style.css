@@ -256,3 +256,18 @@ display: none;
   color: #fff;
   font-size: 14px;
 }
+
+@media screen and (max-width: 470px) {
+    .title1{
+        font-size: 65px;
+        margin-left: 24%;
+    }
+    .btn{
+        margin-left: 80%;
+        font-size: 37px;
+        margin-top: 10%;
+    }
+    .popup{
+        left: 104%;
+    }
+}
